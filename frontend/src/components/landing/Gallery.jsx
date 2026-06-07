@@ -10,42 +10,51 @@ const images = [
 const Gallery = () => {
   return (
     <section
-      id="sala"
-      className="py-24 lg:py-32 bg-[#ece5da] border-t border-[#1a2942]/10"
+      className="py-16 sm:py-24 lg:py-32 bg-[#0d3548] relative overflow-hidden"
+      data-testid="galleria"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-12 mb-16 items-end">
-          <div className="lg:col-span-7">
-            <p className="text-xs uppercase tracking-[0.3em] text-[#c98a3f] mb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 mb-10 sm:mb-12 items-end">
+          <div className="lg:col-span-7 reveal in">
+            <p className="text-xs uppercase tracking-[0.22em] text-[#1AB394] font-semibold">
               In sala
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-[#1a2942]">
-              La chirurgia mini-invasiva, <br />
-              <span className="italic font-light">nel dettaglio.</span>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white mt-3 leading-[1.05] font-semibold">
+              La chirurgia mini-invasiva,
+              <br />
+              nel dettaglio.
             </h2>
           </div>
-          <div className="lg:col-span-5">
-            <p className="text-base md:text-lg leading-relaxed text-[#1a2942]/75 font-light">
-              Tecniche percutanee che riducono il trauma chirurgico e accelerano il
-              ritorno alle normali attività. La precisione si misura in millimetri.
-            </p>
-          </div>
+          <p className="lg:col-span-5 text-white/75 leading-relaxed reveal in">
+            Tecniche percutanee che riducono il trauma chirurgico e accelerano il
+            ritorno alle normali attività. La precisione si misura in millimetri.
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
-          {images.map((src, i) => (
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
+          <div
+            className="relative overflow-hidden rounded-xl reveal in lg:row-span-2 lg:col-span-2 aspect-[4/5]"
+            data-testid="gallery-item-0"
+          >
+            <img
+              alt="Intervento chirurgico 1"
+              className="gallery-img w-full h-full object-cover"
+              src={images[0]}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+          </div>
+          {images.slice(1).map((src, i) => (
             <div
               key={i}
-              className={`relative overflow-hidden ${
-                i % 2 === 0 ? "aspect-[3/4]" : "aspect-[3/4] lg:translate-y-10"
-              }`}
+              className="relative overflow-hidden rounded-xl reveal in aspect-square"
+              data-testid={`gallery-item-${i + 1}`}
             >
               <img
+                alt={`Intervento chirurgico ${i + 2}`}
+                className="gallery-img w-full h-full object-cover"
                 src={src}
-                alt={`Intervento chirurgico ${i + 1}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 ring-1 ring-[#1a2942]/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
           ))}
         </div>

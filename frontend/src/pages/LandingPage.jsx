@@ -11,7 +11,7 @@ import Footer from "../components/landing/Footer";
 
 const LandingPage = () => {
   return (
-    <main className="min-h-screen bg-[#f6f1ea] text-[#1a2942]">
+    <main className="min-h-screen bg-white" data-testid="landing-page">
       <Navbar />
       <Hero />
       <ChiE />

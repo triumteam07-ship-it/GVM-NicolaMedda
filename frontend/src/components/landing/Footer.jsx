@@ -1,13 +1,19 @@
 import React from "react";
+import { Stethoscope } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-12 bg-[#0f1a2e] text-[#f6f1ea]/70 border-t border-[#f6f1ea]/10">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between gap-6 items-start md:items-center">
-        <div>
-          <div className="font-serif text-xl text-[#f6f1ea]">Dr. Nicola Medda</div>
-          <div className="text-xs uppercase tracking-[0.22em] mt-2">
-            Specialista in Ortopedia · Bordighera
+    <footer className="bg-[#0a2738] text-white/70 py-12 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 rounded-xl bg-[#13485F] flex items-center justify-center">
+            <Stethoscope className="h-5 w-5 text-white" />
+          </div>
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.22em] text-[#1AB394] font-semibold">
+              Ospedale Saint Charles · GVM
+            </p>
+            <p className="font-display text-lg text-white">Dr. Nicola Medda</p>
           </div>
         </div>
         <div className="text-xs uppercase tracking-[0.18em] flex flex-wrap gap-x-6 gap-y-2">
@@ -17,9 +23,9 @@ const Footer = () => {
           <span>·</span>
           <span>Trapianti d'Organo</span>
         </div>
-        <div className="text-xs text-[#f6f1ea]/40">
+        <p className="text-xs text-white/40">
           © {new Date().getFullYear()} · Tutti i diritti riservati
-        </div>
+        </p>
       </div>
     </footer>
   );
