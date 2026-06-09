@@ -27,6 +27,30 @@ const Footer = () => {
           © {new Date().getFullYear()} · Tutti i diritti riservati
         </p>
       </div>
+
+      <div
+        className="max-w-7xl mx-auto px-4 sm:px-6 mt-10 pt-8 border-t border-white/5 flex flex-col items-center gap-3"
+        data-testid="footer-powered-by"
+      >
+        <p className="text-[10px] uppercase tracking-[0.28em] text-white/40">
+          Powered by
+        </p>
+        <a
+          href="https://triumteam-studio.preview.emergentagent.com/?utm_source=share"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block transition-opacity duration-300 hover:opacity-80"
+          data-testid="footer-triumteam-logo-link"
+          aria-label="Triumteam Studio - apre in una nuova scheda"
+        >
+          <img
+            src="https://customer-assets.emergentagent.com/job_ortopedia-bordighera/artifacts/y3ow8p2r_image.png"
+            alt="Triumteam Studio"
+            className="h-[60px] w-auto object-contain"
+            data-testid="footer-triumteam-logo"
+          />
+        </a>
+      </div>
     </footer>
   );
 };
