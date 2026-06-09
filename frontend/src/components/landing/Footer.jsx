@@ -44,9 +44,9 @@ const Footer = () => {
           aria-label="Triumteam Studio - apre in una nuova scheda"
         >
           <img
-            src="https://customer-assets.emergentagent.com/job_ortopedia-bordighera/artifacts/y3ow8p2r_image.png"
-            alt="Triumteam Studio"
-            className="h-[60px] w-auto object-contain"
+            src="https://customer-assets.emergentagent.com/job_ortopedia-bordighera/artifacts/6e92vy8s_WhatsApp_Image_2026-06-07_at_14.15.41-removebg-preview.png"
+            alt="Triumteam - Agenzia Digitale Innovativa"
+            className="h-[72px] w-auto object-contain"
             data-testid="footer-triumteam-logo"
           />
         </a>
