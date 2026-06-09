@@ -36,7 +36,7 @@ const Footer = () => {
           Powered by
         </p>
         <a
-          href="https://triumteam-studio.preview.emergentagent.com/?utm_source=share"
+          href="https://triumteam.it"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block transition-opacity duration-300 hover:opacity-80"
