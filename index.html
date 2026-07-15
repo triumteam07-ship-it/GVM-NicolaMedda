@@ -4,17 +4,102 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#13485F" />
-        <meta name="description" content="Dr. Nicola Medda — Specialista in Ortopedia. Chirurgia mini-invasiva percutanea del piede e della caviglia. Ospedale Saint Charles, Bordighera." />
-        <base href="/GVM-NicolaMedda/">
+
+        <!-- SEO -->
+        <title>Dr. Nicola Medda · Ortopedico · Bordighera | GVM</title>
+        <meta
+            name="description"
+            content="Dr. Nicola Medda, Specialista in Ortopedia, Traumatologia e Trapianti d'Organo. Chirurgia mini-invasiva percutanea del piede e della caviglia presso l'Ospedale Saint Charles di Bordighera — GVM Care & Research."
+        />
+        <meta
+            name="keywords"
+            content="Dr. Nicola Medda, ortopedico Bordighera, chirurgia piede caviglia, chirurgia mini-invasiva percutanea, Ospedale Saint Charles, GVM Care & Research, fascite plantare, metatarsalgia, alluce valgo, artrodesi percutanea"
+        />
+        <meta name="author" content="Dr. Nicola Medda" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="./" />
+
+        <!-- Open Graph / Social -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Dr. Nicola Medda · Ortopedico · Bordighera | GVM" />
+        <meta
+            property="og:description"
+            content="Specialista in chirurgia mini-invasiva percutanea del piede e della caviglia presso l'Ospedale Saint Charles, Bordighera — GVM Care & Research."
+        />
+        <meta property="og:locale" content="it_IT" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dr. Nicola Medda · Ortopedico · Bordighera | GVM" />
+        <meta
+            name="twitter:description"
+            content="Specialista in chirurgia mini-invasiva percutanea del piede e della caviglia — Ospedale Saint Charles, Bordighera."
+        />
+
+        <!-- Favicon (relativo) -->
+        <link rel="icon" href="./favicon.ico" />
+        <link rel="apple-touch-icon" href="./logo192.png" />
+        <link rel="manifest" href="./manifest.json" />
+
+        <!-- Preconnect font providers per rendering rapido -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
-        <title>Dr. Nicola Medda · Ortopedia · Bordighera</title>
-        <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
-        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
+        <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+        />
+
+        <!-- Fallback DataCloneError (PerformanceServerTiming) su browser datati / con restrizioni -->
+        <script>
+            window.addEventListener(
+                "error",
+                function (e) {
+                    if (
+                        e.error instanceof DOMException &&
+                        e.error.name === "DataCloneError" &&
+                        e.message &&
+                        e.message.includes("PerformanceServerTiming")
+                    ) {
+                        e.stopImmediatePropagation();
+                        e.preventDefault();
+                    }
+                },
+                true,
+            );
+        </script>
+
+        <!-- Structured Data schema.org (Physician) per SEO locale -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Physician",
+                "name": "Dr. Nicola Medda",
+                "medicalSpecialty": [
+                    "Orthopedic",
+                    "Traumatology",
+                    "Organ Transplantation"
+                ],
+                "description": "Specialista in chirurgia mini-invasiva percutanea del piede e della caviglia.",
+                "hospitalAffiliation": {
+                    "@type": "Hospital",
+                    "name": "Ospedale Saint Charles",
+                    "parentOrganization": "GVM Care & Research",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Via Generale Cantore 39",
+                        "addressLocality": "Bordighera",
+                        "addressRegion": "IM",
+                        "addressCountry": "IT"
+                    }
+                }
+            }
+        </script>
     </head>
     <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <noscript>Per visualizzare il sito è necessario abilitare JavaScript.</noscript>
         <div id="root"></div>
     </body>
 </html>
